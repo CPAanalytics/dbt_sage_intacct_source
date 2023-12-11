@@ -1,4 +1,9 @@
-
+{{ config(
+    materialized = 'table',
+    indexes=[
+      {'columns': ['record_no'], },
+    ]
+)}}
 with base as (
 
     select * 

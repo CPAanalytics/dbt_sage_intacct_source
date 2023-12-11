@@ -1,4 +1,9 @@
-
+{{ config(
+    materialized = 'table',
+    indexes=[
+      {'columns': ['batch_key'], },
+    ]
+)}}
 with base as (
 
     select * 
